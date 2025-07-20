@@ -219,3 +219,34 @@
 # for i in range(len(a)):
 #     summ += a[i]
 # print(summ)
+# a = [int(i) for i in input().split()]
+# if len(a) == 1:
+#     print(a[0])
+# else:
+#     for i in range(len(a)):
+#         left = a[i - 1]
+#         right = a[(i + 1) % len(a)]
+#         print(left + right, end=' ')
+# a = [int(i) for i in input().split()]
+# a.sort()
+
+# duplicates = []
+
+# for i in range(1, len(a)):
+#     if a[i] == a[i - 1] and a[i] not in duplicates:
+#         duplicates.append(a[i])
+
+# print(*duplicates)
+
+numbers = []
+total = 0
+
+while True:
+    n = int(input())
+    numbers.append(n)
+    total += n
+    if total == 0:
+        break
+
+square_sum = sum(i ** 2 for i in numbers)
+print(square_sum)
