@@ -238,15 +238,153 @@
 
 # print(*duplicates)
 
-numbers = []
-total = 0
+# numbers = []
+# total = 0
 
-while True:
-    n = int(input())
-    numbers.append(n)
-    total += n
-    if total == 0:
-        break
+# while True:
+#     n = int(input())
+#     numbers.append(n)
+#     total += n
+#     if total == 0:
+#         break
 
-square_sum = sum(i ** 2 for i in numbers)
-print(square_sum)
+# square_sum = sum(i ** 2 for i in numbers)
+# print(square_sum)
+# n = int(input())
+# count = 0
+# i = 1
+
+# while count < n:
+#     for j in range(i):
+#         if count < n:
+#             print(i, end=' ')
+#             count += 1
+#     i += 1
+
+# lst = [int(i) for i in input().split()]
+# x = int(input())
+# found = False
+# for i in range(len(lst)):
+#         if lst[i] == x:
+#             print(abs(i), end=' ')
+#             found = True
+# if not found:
+#     print('Отсутствует')
+# matrix = []
+
+# while True:
+#     row = input()
+#     if row == "end":
+#         break
+#     matrix.append([int(x) for x in row.split()])
+
+# rows = len(matrix)
+# cols = len(matrix[0])
+
+# result = []
+
+# for i in range(rows):
+#     new_row = []
+#     for j in range(cols):
+#         top = matrix[(i - 1) % rows][j]
+#         bottom = matrix[(i + 1) % rows][j]
+#         left = matrix[i][(j - 1) % cols]
+#         right = matrix[i][(j + 1) % cols]
+#         new_row.append(top + bottom + left + right)
+#     result.append(new_row)
+
+# for row in result:
+#     print(' '.join(map(str, row)))
+
+# n = int(input())
+
+# matrix = []
+# for _ in range(n):
+#     matrix.append([0] * n)
+
+# num = 1        
+# top = 0        
+# bottom = n - 1 
+# left = 0       
+# right = n - 1  
+
+# while left <= right and top <= bottom:
+
+#     for col in range(left, right + 1):
+#         matrix[top][col] = num
+#         num += 1
+#     top += 1
+
+#     for row in range(top, bottom + 1):
+#         matrix[row][right] = num
+#         num += 1
+#     right -= 1  
+
+#     if top <= bottom:
+#         for col in range(right, left - 1, -1):
+#             matrix[bottom][col] = num
+#             num += 1
+#         bottom -= 1
+
+#     if left <= right:
+#         for row in range(bottom, top - 1, -1):
+#             matrix[row][left] = num
+#             num += 1
+#         left += 1
+
+
+# for row in matrix:
+#     print(*row)
+
+# def f(x):
+#     if x <= -2:
+#         return 1-(x+2)**2
+#     elif -2 < x <= 2:
+#         return -(x/2)
+#     elif x > 2:
+#         return (x-2)**2 + 1
+    
+# x = float(input())
+# print(f(x))
+
+# def modify_list(lst):
+#     i = 0
+#     while i < len(lst):
+#         if lst[i] % 2 == 0:
+#             lst[i] //= 2
+#             i += 1
+#         else:
+#             lst.pop(i)
+
+# lst = [10, 5, 8, 3, 2]
+# print(lst)
+# modify_list(lst)
+# print(lst)
+
+# def update_dictionary(d, key, value):
+#     if key in d:
+#         d[key].append(value)
+#     elif 2 * key in d:
+#         d[2 * key].append(value)
+#     else:
+#         d[2 * key] = [value]
+
+# d = {}
+# print(update_dictionary(d, 1, -1))  # None
+# print(d)                            # {2: [-1]}
+# update_dictionary(d, 2, -2)
+# print(d)                            # {2: [-1, -2]}
+# update_dictionary(d, 1, -3)
+# print(d)      
+
+text = input().lower().split()  
+word_count = {}
+def clean_word(word):
+    for word in text:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+
+for word, count in word_count.items():
+    print(word, count)
