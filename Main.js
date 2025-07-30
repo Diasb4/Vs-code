@@ -1,1 +1,0 @@
-console.log("Hello, World! This is the Main.js file." + new Date().toLocaleString());
